@@ -100,9 +100,12 @@ model = build_model(X_train.shape[1], y_train.shape[1])
 
 if 'model_trained' not in st.session_state:
     with st.spinner("Training model..."):
-        model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_test, y_test), verbose=0)
+        history = model.fit(X_train, y_train, epochs=20, batch_size=32, verbose=0)
+        final_train_acc = history.history['accuracy'][-1]
     st.session_state['model_trained'] = True
+    st.session_state['final_train_acc'] = final_train_acc
     st.success("Model trained successfully.")
+    st.write(f" **Final Training Accuracy:** `{final_train_acc * 100:.2f}%`")
 
 
 user_inputs = []
