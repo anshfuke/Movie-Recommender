@@ -87,6 +87,12 @@ st.sidebar.header("Project Info")
 st.sidebar.write("""
 This is a Bollywood movie recommender system that uses genre prediction powered by a deep learning model trained on movie titles.
 """)
+st.sidebar.header("Project Members")
+st.sidebar.write("""
+- Kartik Fuke (13)  
+- Himanshu Khobaragade (04)  
+- Himanshu Loriya (05)
+""")
 
 # Load + Train 
 X_train, X_test, y_train, y_test, vectorizer, label_encoder, movies_df = load_and_prepare_data()
