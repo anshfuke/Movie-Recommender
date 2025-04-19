@@ -40,7 +40,7 @@ def build_model(input_dim, output_dim):
         Dense(128, activation='relu', input_shape=(input_dim,)),  
         Dropout(0.2),
         Dense(64, activation='relu'),
-        Dropout(0.2),
+        Dropout(0.3),
         Dense(output_dim, activation='softmax')   #layer for genre prediction
     ])
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
