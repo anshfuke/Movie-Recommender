@@ -1,4 +1,4 @@
-# Bollywood Movie Recommender
+# Cine Buddy
 
 ### **Software Lab 2 Project**
 
